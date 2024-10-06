@@ -79,7 +79,7 @@ const CreateArticle = () => {
         formData.append('file', selectedFile);
 
         try {
-            const response = await axios.post('http://localhost:5000/api/images/upload', formData, {
+            const response = await axios.post('https://minimal-flask-vercel.vercel.app/api/images/upload', formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data',
                     'Authorization': `Bearer ${localStorage.getItem('token')}`
